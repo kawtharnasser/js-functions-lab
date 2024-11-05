@@ -52,15 +52,15 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 const isCharAVowel = (char) => {
-  if (char === 'A' || char === 'a') {
+  if (char === 'a') {
     return true
-  } else if (char === 'E' || char === 'e') {
+  } else if (char === 'e') {
     return true
-  } else if (char === 'I' || char === 'i') {
+  } else if (char === 'i') {
     return true
-  } else if (char === 'O' || char === 'o') {
+  } else if (char === 'o') {
     return true
-  } else if (char === 'U' || char === 'u') {
+  } else if (char === 'u') {
     return true
   } else {
     return false
@@ -85,3 +85,58 @@ const generateEmail = (userName, domain) => {
 }
 
 console.log('Exercise 4 Result:', generateEmail('johnsmith', 'example.com'))
+
+/*
+Exercise 5: greetUser()
+
+Define a function called greetUser. It should take a name and a 
+time of day (morning, afternoon, evening) and return a personalized 
+greeting.
+
+Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
+
+Complete the exercise in the space below:
+*/
+const greetUser = (userName, dayTime) => {
+  if (dayTime === 'morning') {
+    return `Good ${dayTime}, ${userName}!`
+  } else if (dayTime === 'afternoon') {
+    return `Good ${dayTime}, ${userName}!`
+  } else if (dayTime === 'evening') {
+    return `Good ${dayTime}, ${userName}!`
+  } else {
+    return 'Hello! '
+  }
+}
+console.log('Exercise 5 Result:', greetUser('Sam', 'morning'))
+
+/*
+Exercise 6: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers 
+and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+const maxOfThree = (n1, n2, n3) => {
+  if (n2 >= n1) {
+    return n2
+    if (n3 >= n2) {
+      return n3
+    } else {
+      return n2
+    }
+  } else if (n1 >= n2) {
+    if (n3 >= n1) {
+      return n3
+    } else {
+      return n1
+    }
+  } else {
+    return 'wrong input'
+  }
+}
+
+console.log('Exercise 6 Result:', maxOfThree(5, 10, 8))
