@@ -140,3 +140,49 @@ const maxOfThree = (n1, n2, n3) => {
 }
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8))
+
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: 
+the bill amount and the tip percentage (as a whole number). 
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+const calculateTip = (amount, persentage) => {
+  let tipAmount = (amount * persentage) / 100
+  return tipAmount
+}
+
+console.log('Exercise 7 Result:', calculateTip(50, 20))
+
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+const convertTemperature = (temperature, scale) => {
+  //F = (°C × 9/5) + 32
+  //C = (°F − 32) x 5/9
+  let conTemp = 0
+  if (scale === 'F') {
+    conTemp = (temperature - 32) * 0.56
+  } else if (scale === 'C') {
+    conTemp = temperature * 1.8 + 32
+  } else {
+    return 'Wrong Input'
+  }
+  return conTemp
+}
+console.log('Exercise 8 Result:', convertTemperature(32, 'C'))
